@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ("Build") {
             steps {
-                sh 'env -DskipTests clean package'
+                sh 'mvn -DskipTests clean package'
             }
         }
         stage ("Test") {
